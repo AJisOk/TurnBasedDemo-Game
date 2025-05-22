@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BallHittingScript : MonoBehaviour
 {
+    [SerializeField] protected Rigidbody _golfBallRB;
+
     //hide and keep mouse centered to screen at all times
     //basic drag and release golf shot mechanic
     //on click, lock camera vertical movement
