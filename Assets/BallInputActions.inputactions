@@ -1,0 +1,131 @@
+{
+    "name": "BallInputActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "61f2c42b-4146-4135-9328-d865fc814c4a",
+            "actions": [
+                {
+                    "name": "StartAiming",
+                    "type": "Button",
+                    "id": "50408896-0479-43f9-a614-5bbd8df3ca40",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "StopAiming",
+                    "type": "Button",
+                    "id": "8e309b4e-d194-4502-97c0-77381ed6abd1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "2047b18f-28c0-4620-9790-310fffb46202",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "StartShooting",
+                    "type": "Button",
+                    "id": "0b64fcb3-42b1-4e53-8fb7-ea5e33e69c3b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "StopShooting",
+                    "type": "Button",
+                    "id": "90cfe95e-8e85-4a4b-b82e-a64a0f96ae71",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "aaa2d8a9-0ee7-4fec-a85d-fc60f2369c52",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mouse&Keyboard",
+                    "action": "StartAiming",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6146f1cc-5975-4121-a8c1-1ef17a50fbf5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mouse&Keyboard",
+                    "action": "StopAiming",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f7ad5b9-f950-4383-89c7-7cf551a6e1cd",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mouse&Keyboard",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b36653c7-22c9-40af-8d5b-34817f13c8dd",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": ";Mouse&Keyboard",
+                    "action": "StartShooting",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0bf90c3e-9985-4695-bdc2-1ccf0c1a8b5f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": ";Mouse&Keyboard",
+                    "action": "StopShooting",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Mouse&Keyboard",
+            "bindingGroup": "Mouse&Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
