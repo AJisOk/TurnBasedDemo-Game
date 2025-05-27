@@ -7,6 +7,8 @@ using Unity.Cinemachine;
 public class BallHittingScript : MonoBehaviour
 {
     [SerializeField] protected Rigidbody _golfBallRB;
+    [SerializeField] protected float _minShotForce = 1f;
+    [SerializeField] protected float _maxShotForce = 10f;
     [SerializeField] protected Image _shotPowerBarImage;
     [SerializeField] protected Image _shotPowerBarFillImage;
     [SerializeField] protected Canvas _shotPowerBarCanvas;
@@ -88,6 +90,17 @@ public class BallHittingScript : MonoBehaviour
     public void OnStopShooting(InputValue value)
     {
         if (!_isAiming) return;
+        
+        
+        //add force to ball based on shot charge time
+        float _shotForce = Mathf.Lerp(_minShotForce, _maxShotForce, _shotPower);
+        Vector3 _direction = (_ballAimOrigin.position - _ballAimTarget.position).normalized;
+
+        print("Shot Force: " + _shotForce);
+        
+
+        _golfBallRB.AddForce(_direction * _shotForce,ForceMode.Impulse);
+
 
         _isShooting = false;
         _cameraAxisController.enabled = true;
